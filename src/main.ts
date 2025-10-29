@@ -17,19 +17,19 @@ function setup() {
   `;
 
   // Get the increment button element from the document
-  const bI = document.getElementById(a);
+  const buttonIncrement = document.getElementById(a);
   // Get the decrement button element from the document
-  const bD = document.getElementById("dec");
+  const buttonDecrement = document.getElementById("dec");
   // Get the reset button element from the document
-  const bR = document.getElementById("reset");
+  const buttonReset = document.getElementById("reset");
   // Get the counter span element from the document
-  const ctr = document.getElementById(b);
+  const counterSpan = document.getElementById(b);
 
   // Check if any element is missing, then exit the function
-  if (!bI || !bD || !bR || !ctr) return;
+  if (!buttonIncrement || !buttonDecrement || !buttonReset || !counterSpan) return;
 
   // Add click event to the increment button
-  bI.addEventListener("click", () => {
+  buttonIncrement.addEventListener("click", () => {
     // Increase the counter by 1
     c++;
     // Update the counter display
@@ -41,7 +41,7 @@ function setup() {
   });
 
   // Add click event to the decrement button
-  bD.addEventListener("click", () => {
+  buttonDecrement.addEventListener("click", () => {
     // Decrease the counter by 1
     c--;
     // Update the counter display
@@ -53,7 +53,7 @@ function setup() {
   });
 
   // Add click event to the reset button
-  bR.addEventListener("click", () => {
+  buttonReset.addEventListener("click", () => {
     // Reset the counter to 0
     c = 0;
     // Update the counter display
